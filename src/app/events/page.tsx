@@ -156,11 +156,11 @@ export default function EventsPage() {
                   </div>
                 )}
 
-                {message?.id === event.id && (
-                  <p className={`mt-4 font-medium ${message.ok ? 'text-emerald-700' : 'text-red-600'}`}>
-                    {message.text}
-                  </p>
-                )}
+                {message && message.id === event.id && (
+     <p className={`mt-4 font-medium ${message.ok ? 'text-emerald-700' : 'text-red-600'}`}>
+       {message.text}
+     </p>
+   )}
               </div>
             );
           })}
